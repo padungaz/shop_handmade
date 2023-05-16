@@ -1,0 +1,85 @@
+.slideshow {
+    max-width: 80vw;
+    margin: 20px auto;
+
+    &>h2 {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 400;
+        font-style: italic;
+        text-align: center;
+        color: purple
+    }
+
+    .card {
+        background: #d8bd9f;
+        border-radius: 8px;
+        overflow: hidden;
+        height: 420px;
+        color: #fff;
+        cursor: pointer;
+        box-shadow: 2px 2px 10px rgba($color: #000, $alpha: 0.3);
+
+        .card-top h5 {
+            margin: 10px 10px 10px 20px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .card-top {
+            &>div {
+                overflow-y: hidden;
+                display: block;
+
+                &::-webkit-scrollbar {
+                    width: 0;
+                    height: 0;
+                    display: none;
+                }
+
+                img {
+                    width: 100%;
+                    height: 275px;
+                    object-fit: cover;
+                    transition: 500ms ease all;
+                    background-position: center center;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        .card-bottom {
+            margin: 10px 20px;
+
+            .category {
+                position: relative;
+                text-transform: capitalize;
+                font-size: 1.1rem;
+                font-weight: 400;
+
+                &::before {
+                    content: '';
+                    background: rgb(255, 61, 61);
+                    position: absolute;
+                    top: calc(100% + 10px);
+                    left: 0;
+                    right: 0;
+                    height: 3px;
+                    width: 65%;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+}
+
+.slick-slide>div {
+    margin: 0 10px;
+}
+
+.slick-list {
+    margin: 0 -10px;
+}

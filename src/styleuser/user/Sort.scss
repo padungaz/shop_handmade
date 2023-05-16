@@ -1,0 +1,33 @@
+.sort {
+    text-align: right;
+    // padding-right: 50px;
+    display: block;
+
+    &__feature {
+        background-color: #fff;
+        color: #000;
+        border: none;
+        outline: none;
+        border-radius: 6px;
+        box-shadow: 2px 2px 10px #ccc;
+        font-weight: bold;
+        padding: 5px;
+        text-align: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        option {
+            color: #000;
+            font-weight: 600;
+            padding: 8px 0;
+        }
+    }
+}
+
+@media (max-width:770px) {
+    .sort {
+        margin-top: 10px;
+    }
+}

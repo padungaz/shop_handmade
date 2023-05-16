@@ -1,0 +1,40 @@
+:root{
+    --circe: 20px
+}
+
+.item-voucher{
+width: 100%;
+border-radius: 5px;
+background-color: white;
+position: relative;
+height: 100px;
+// z-index: 1;
+padding: 9px 17px;
+&:hover{
+    cursor: pointer;
+}
+&::after{ 
+    content: " ";
+    // z-index: 2;
+    display: block;
+    position: absolute;
+    top: calc(50% - var(--circe) / 2);
+    left: -10px;
+    width: var(--circe);
+    height: var(--circe);
+    border-radius: 50%;
+    background-color: #1A192D;
+}
+&::before{ 
+    content: " ";
+    // z-index: 100;
+    display: block;
+    position: absolute;
+    top: calc(50% - var(--circe) / 2);
+    right: -10px;
+    width: var(--circe);
+    height: var(--circe);
+    border-radius: 50%;
+    background-color: #1A192D;
+}
+}

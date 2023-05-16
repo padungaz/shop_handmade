@@ -1,0 +1,49 @@
+
+.account{
+    z-index: 9999;
+    color: #fff ;
+    display: flex;
+    // align-items: center;
+    &:hover{
+        cursor: pointer;
+    }
+    .textAcc{
+        display: flex;
+        text-align: left;
+        &>a{
+            font-size: 24px;
+            color: white;
+            padding: 0;
+            margin: 0;
+        }    
+    }
+    .textAcc>span{
+        margin-left: 5px;
+        font-size: 0;
+        padding-top: 4px;
+        &:hover{
+            color: blue;
+            &::after{
+                content:"👍" ;
+                font-size: 16px;
+                color: yellow;
+            }
+        }
+        transition: font-size 0.1s ease-in-out;
+    }
+    .textAcc:hover span{
+        opacity: 1;
+        visibility: visible;
+        font-size: 1.2rem;
+        color: white;
+    }
+    .avt {        
+        width: 55px;
+        height: 55px;
+        margin-right: 28px ;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+  
+    }
+     

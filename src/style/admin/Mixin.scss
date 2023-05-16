@@ -1,0 +1,55 @@
+@mixin animationFrom {
+    width: 0;
+    padding: 0;
+    min-width: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+@mixin animationtTo($padd,$width) {
+    padding: $padd;
+    max-width: $width;
+    min-width: $width;
+    opacity: 1;
+    visibility: visible;
+}
+@mixin rootModule {
+    position: sticky;
+    top: 0;
+    background-color: #4640a1;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 15px;
+    min-height: max-content;
+    max-height: calc(100vh - 80px);
+    margin-right: 4px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+        width: 0;
+        height: 0;
+    }
+    i:first-child {
+        font-size: 2rem;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+}
+@mixin flexRow ($space) {
+    display: flex;
+     @if $space{
+            justify-content: space-between;
+     }
+    align-items: center;
+
+}
+
+@mixin moduleUserPage ($dis:block,$hei:max-content) {
+    height: calc(100vh - 80px);
+    position: absolute;
+    right: 0;
+    display: $dis;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px black;
+    width: var(--widthModule);
+    max-height: $hei;
+    @content
+}

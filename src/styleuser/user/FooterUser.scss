@@ -1,0 +1,246 @@
+.footer-page {
+    --color_footer: white;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://wooddad.com/wp-content/uploads/2019/05/wood-structure.jpg);
+    background-size: cover;
+    object-fit: cover;
+    padding: 0.01vh;
+    // margin-top: 60px;
+    box-shadow: 5px 0 5px #333;
+
+    .main-footer {
+        margin-top: 12.5%;
+        display: flex;
+        margin-bottom: 12.5%;
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+        max-height: 50vh;
+        min-height: 50vh;
+        align-items: flex-end;
+        justify-content: center;
+        box-sizing: content-box;
+        background-color: rgba(173, 79, 17, 0.658);
+
+        img {
+            object-fit: contain;
+            top: 0;
+            z-index: 0;
+            left: 5%;
+            position: absolute;
+            height: 100%;
+            width: 30%;
+            filter: drop-shadow(10px 5px 3px black);
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .contact {
+            display: flex;
+            height: 50vh;
+            width: 100%;
+            justify-content: flex-end;
+            box-shadow: 8px 8px 5px #333;
+
+            .contact-left {
+                flex-grow: 1;
+                height: 100%;
+                display: flex;
+                justify-content: space-around;
+                background-color: rgb(175, 118, 118);
+                align-self: flex-end;
+                padding: 20px 40px;
+
+
+            }
+
+            .contact-right {
+                width: 55%;
+                height: 50vh;
+                padding: 20px 20px;
+                text-align: center;
+
+                .footer__contact {
+                    p {
+                        font-family: 'Inspiration', cursive;
+                        font-size: 19px;
+                        color: white;
+                        margin-bottom: 2px;
+
+                        i {
+                            margin-right: 3px;
+                            font-size: 18px;
+                            min-width: 30px;
+                        }
+
+                    }
+                }
+
+                h3 {
+                    font-weight: 700;
+                    margin-top: 15px;
+                    color: var(--color_footer);
+                    margin-bottom: 2px;
+                }
+
+                .icon-logo {
+
+                    i {
+                        font-size: 32px;
+                        background-color: white;
+                        margin: 10px 20px;
+                        min-width: 40px;
+                        min-height: 40px;
+                        max-height: 40px;
+                        line-height: 40px;
+                        border-radius: 8px;
+                        text-align: center;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover {
+                            cursor: pointer;
+                            box-shadow: 3px 5px 3px #333;
+                        }
+
+                        &:nth-of-type(1) {
+                            &:hover {
+                                color: rgb(255, 255, 255);
+                                background-color: rgb(63, 63, 226);
+                                transition: all 0.2s ease-in-out;
+                            }
+                        }
+
+                        &:nth-of-type(2) {
+                            &:hover {
+                                color: rgb(63, 63, 226);
+                                background-color: rgb(255, 255, 255);
+                                transition: all 0.2s ease-in-out;
+                            }
+                        }
+
+                        &:nth-of-type(3) {
+                            &:hover {
+                                color: rgb(236, 28, 28);
+                                background-color: rgb(255, 255, 255);
+                                transition: all 0.2s ease-in-out;
+                            }
+                        }
+
+                        &:nth-of-type(4) {
+                            &:hover {
+                                color: rgb(241, 241, 241);
+                                background-color: rgb(63, 63, 226);
+                                transition: all 0.2s ease-in-out;
+                            }
+                        }
+
+                    }
+
+                }
+
+                .social_contact {
+                    position: relative;
+                    height: 45px;
+                    line-height: 45px;
+
+                    h4 {
+                        color: var(--color_footer);
+                        font-size: 38px;
+
+                    }
+
+                    .social_input {
+                        position: absolute;
+                        top: 0;
+                        right: calc(50% - 100px);
+                        width: 200px;
+                        max-width: 200px;
+                        transition: all 0.2s ease-in-out;
+
+                        &:focus-within {
+                            opacity: 1;
+                            top: 50px;
+                            transition: all 0.1s ease-in-out;
+
+                            input {
+                                opacity: 1;
+                            }
+
+                            label {
+                                opacity: 1;
+                            }
+                        }
+
+                        input {
+                            opacity: 0;
+                            transition: all 0.1s ease-in-out;
+                            border-radius: 10px;
+                            padding-left: 15px;
+                            padding-right: 15px;
+                            border: 3px burlywood solid;
+                            outline: none;
+
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+
+                        label {
+                            height: max-content;
+                            line-height: 16px;
+                            color: white;
+                            opacity: 0;
+                        }
+                    }
+                }
+
+
+            }
+        }
+
+
+    }
+}
+
+@media (max-width:700px) {
+    .footer-page {
+        .main-footer {
+            min-height: 70vh;
+            max-height: 70vh;
+
+            img {
+                top: 0;
+                left: calc(50vw - 20%);
+                height: 15vh;
+                width: 40%;
+            }
+
+            .contact {
+                height: 100%;
+                flex-direction: column;
+
+                .contact-left {
+                    width: 100vw;
+                    order: 2;
+
+                }
+
+                .contact-right {
+                    padding-top: 40px;
+                    order: 1;
+                    width: 100vw;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-page {
+        width: 100vw;
+    }
+}

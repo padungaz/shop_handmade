@@ -1,0 +1,162 @@
+.module-list-slider{
+    @include rootModule();
+    
+    .header-module-info{
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 8px;
+        button{
+          background-color: green;
+          border: none;
+          border-radius: 8px;
+          padding: 0 15px;
+          color: white;
+          &:disabled{
+            background-color: rgb(110, 110, 110);
+          }
+        }
+      
+      }
+      .section{
+        --heightItemSilder:50px;
+        font-size: 16px;
+        width: 100%;
+        min-height: 100px;
+        height: max-content;
+        margin-bottom: 10px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar{
+            width: 0;
+        }
+        .item-slider{
+            background-color: white;
+            display: flex;
+            height: var(--heightItemSilder);
+            width: 100%;
+            border-radius: 5px;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            // object-fit: contain;
+            .img{
+                min-width: 80px;
+                height:  var(--heightItemSilder);
+                border-radius: 5px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            i{
+                font-size: 1.2rem;
+                padding: 0 8px;
+            }
+            &-detail{
+                flex-grow: 1;
+                height: 100%;
+                margin-left: 8px;
+                margin-right: 6px;
+                padding: 3px 0;
+                overflow: hidden;
+                
+                h6{
+                    white-space: nowrap;
+                    width: 100%;
+                    text-overflow: ellipsis ;
+                    margin: 0;
+                    padding-right: 5px;
+                    overflow: hidden;
+                    
+                }
+                p{
+                    margin-bottom: 0px;
+                }
+            }
+            span{
+                height: 100%;
+                display: inline-flex;
+                width:0;
+                justify-content: center;
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: white;
+                align-items: center;
+                border-radius: 5px;
+                padding: 0;
+                margin: 0;
+                color: transparent;
+                &:hover{
+                    cursor: pointer;
+                }
+
+            }
+            
+        }
+      }
+}
+// .bg-red{
+//     background-color: red;
+// }
+.buttonOn{
+    animation: buttonOn 0.3s forwards var(--in);
+}
+.buttonOff{
+    animation: buttonOff 0.5s forwards var(--in) ;
+}
+@keyframes buttonOn {
+    0%{
+        @include animationFrom();
+        background-color: transparent;
+        color: transparent;
+    }
+    30%{
+        opacity: 0;
+        visibility: hidden;
+        background-color: transparent;
+        color: transparent;
+    }
+    100%{
+        @include animationtTo(0,30px);
+        
+        background-color: red;
+        color: black;
+    }
+}
+@keyframes buttonOff {
+    0%{
+        @include animationtTo(0px,30px);
+        background-color: red;
+        color: black;
+    }
+    100%{
+        // @include animationFrom();
+        background-color: transparent;
+        color: transparent;
+    }
+}
+
+.animation-list-slider-on{
+    animation: moduleOn 0.3s forwards;
+}
+.animation-list-slider-off{
+    animation: moduleOff 0.3s forwards;
+}
+@keyframes moduleOn {
+    0%{
+        @include animationFrom();
+    }
+    100%{
+        @include animationtTo(6px,var(--widthModule));
+        max-width: var(--widthModule)
+    }
+}
+@keyframes moduleOff {
+    0%{
+        @include animationtTo(6px,var(--widthModule));
+        }
+    100%{
+        @include animationFrom();
+    }
+   
+}

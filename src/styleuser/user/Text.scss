@@ -1,0 +1,64 @@
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 6.7rem;
+    height: calc(100% - 12px);
+    position: relative;
+
+    &::after {
+        content: "";
+        width: inherit;
+        height: 1px;
+        border-bottom: 1px solid black;
+        transform: rotate(-22deg);
+    }
+
+    a {
+        h5 {
+            margin-bottom: 0;
+        }
+    }
+
+    h5:hover {
+        font-size: 1.3rem;
+        font-weight: 600;
+        transition: all 0.1s ease-in-out;
+    }
+
+    a:first-child {
+        text-decoration: none;
+        position: absolute;
+        top: 0;
+        color: #000;
+        left: 0;
+
+        &>h4 {
+            display: block;
+            border-right: 2px solid #706dcb;
+            padding-right: 25px;
+
+            &:hover {
+                cursor: pointer;
+                color: blue;
+                opacity: 0.9;
+            }
+        }
+    }
+
+    a:last-child {
+        text-decoration: none;
+        color: #000;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        &>h4 {
+            &:hover {
+                cursor: pointer;
+                color: blue;
+                opacity: 0.9;
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.page-profile{
+    width: 100%;
+    height: 100vh;
+    background-color: #1A192D;
+    margin: 0;
+    padding: 0;
+
+    .bg-profile{
+        padding: 20px;
+        width: 100%;
+        height: 35vh;
+        max-height: 450px;
+        background-color: #333;
+        position: relative;
+        i{
+            color: white;
+            font-size: 1.5rem;
+            &:hover{
+            cursor: pointer;
+            filter: drop-shadow(0 0 1rem rgb(0, 0, 0));
+            transition: all .3s ease-in-out ;
+            }
+        }
+        .avt-admin{
+            width: 134px;
+            height: 134px;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 2px 5px 10px black;
+            box-shadow: inset 0px 0px 6px black ;
+            position: absolute;
+            bottom: -40px;
+            left: calc(50vw - 67px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i{
+                color: black;
+               font-size: 115px;
+               filter: drop-shadow(0 0 0.6rem rgb(0, 0, 0));
+            }
+        }
+    }
+}

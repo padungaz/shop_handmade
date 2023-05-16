@@ -1,0 +1,17 @@
+.cart-num {
+    content: attr(total-product);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 6px;
+    right: -7px;
+    font-size: 14px;
+    color: #fff;
+    padding-top: 3px;
+    font-weight: 500;
+    line-height: 17px;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+}

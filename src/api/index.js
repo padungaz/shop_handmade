@@ -1,0 +1,11 @@
+export { createAccount } from "./apiMethod";
+export { getAccount } from "./apiMethod";
+export { fetSlide } from "./apiMethod";
+export { createProfileAccount } from "./apiMethod";
+export { createItemCart } from "./apiMethod";
+export { fetProducts } from "./apiMethod";
+export { GetDataProduct } from "./adminMethodAip";
+export { PutDataProduct } from "./adminMethodAip";
+export { PostDataProduct } from "./adminMethodAip";
+export { GetDataSlideShow } from "./adminMethodAip";
+export { PutDataSlideShow } from "./adminMethodAip";

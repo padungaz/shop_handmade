@@ -1,0 +1,88 @@
+.modal-forgot {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 25px;
+    height: max-content;
+    min-height: calc(100vh - 80px);
+    background-image: url(../../img/bglogin.jpg);
+
+    .forgot,
+    .setpass {
+        width: 90%;
+        max-width: 490px;
+        height: max-content;
+        border: 1px solid #000;
+        border-radius: 6px;
+        padding: 30px;
+        box-shadow: 2px 2px 6px rgb(0, 0, 0);
+        z-index: 2;
+        background-color: #fff;
+
+        &__title {
+            display: flex;
+            align-items: center;
+
+            &>p {
+                margin-bottom: 0;
+                padding: 5px;
+                width: 42px;
+                margin-right: 5px;
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: 0.85;
+                }
+
+                &>i {
+                    font-size: 2rem;
+                    color: #493a59;
+                }
+            }
+
+            h4 {
+                color: #493a59;
+            }
+
+        }
+
+        div:nth-child(2) {
+            input {
+                font-weight: 400;
+                width: 100%;
+                height: 50px;
+                border-radius: 6px;
+                padding: 0 10px;
+                outline: none;
+                border: 1px solid #493a59;
+                margin: 10px 0;
+
+                &::placeholder {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        div:last-child {
+            text-align: center;
+            padding-top: 10px;
+
+            button {
+                width: 200px;
+                height: 50px;
+                max-width: 60%;
+                border: none;
+                background-color: #d8bd9f;
+                font-size: 25px;
+                color: #000;
+                font-weight: 450;
+                border-radius: 6px;
+
+                &:hover {
+                    opacity: 0.85;
+                }
+            }
+        }
+    }
+}

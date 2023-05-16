@@ -1,0 +1,25 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &>img {
+        width: 400px;
+        height: 400px;
+    }
+
+    &__comment {
+        display: flex;
+        align-items: center;
+
+        &>i {
+            font-size: 25px;
+        }
+
+        &>p {
+            margin: 0 0 0 8px;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+    }
+}
